@@ -824,18 +824,18 @@ $red:#ff7675;
 
 @media screen and (max-width: 500px) {
   .innerFlex {
-    flex-basis: 50%;
+    flex-basis: 100%;
   }
 }
 
 @media screen and (max-width: 850px) {
   .innerFlex {
-    flex-basis: 33%;
+    flex-basis: 50%;
   }
 }
 
 @media screen and (max-width: 1200px) {
   .innerFlex {
-    flex-basis: 25%;
+    flex-basis: 33%;
   }
 }
