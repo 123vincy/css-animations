@@ -1089,23 +1089,21 @@ $white:#fff;
   }
 
 
-
-}
-
-@media screen and (max-width: 500px) {
-  .innerFlex {
-    flex-basis: 100%;
+  @media screen and (max-width: 500px) {
+    .innerFlex {
+      flex-basis: 100%;
+    }
   }
-}
 
-@media screen and (max-width: 850px) {
-  .innerFlex {
-    flex-basis: 50%;
+  @media screen and (max-width: 850px) {
+    .innerFlex {
+      flex-basis: 50%;
+    }
   }
-}
 
-@media screen and (max-width: 1200px) {
-  .innerFlex {
-    flex-basis: 33%;
+  @media screen and (max-width: 1200px) {
+    .innerFlex {
+      flex-basis: 33%;
+    }
   }
 }
