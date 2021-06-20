@@ -1,16 +1,27 @@
 <div class="animContainer">
 
-  <div *ngFor="let anim of animations" [ngClass]='anim' class="innerFlex">
-    <div> <span
-        *ngIf="anim=='rotating-button-effect-10' || anim=='rotating-button-effect-16' || anim=='rotating-button-effect-17'"></span>
-      Hover Me
+  <div *ngFor="let anim of animations" class="innerFlex">
+
+    <div class="title">{{anim.title}}</div>
+
+    <div [ngClass]='anim.class'>
+      <div> <span
+          *ngIf="anim.class=='rotating-button-effect-10' || anim.class=='rotating-button-effect-16' || anim.class=='rotating-button-effect-17'"></span>
+        Hover Me
+      </div>
     </div>
   </div>
-  <div class='rotating-button-effect-12 innerFlex'>
-    <div><span>Hover Me</span></div>
+  <div class='innerFlex'>
+    <div class="title">Splitted Button Effect</div>
+    <div class='rotating-button-effect-12 '>
+      <div><span>Hover Me</span></div>
+    </div>
   </div>
-  <div class='rotating-button-effect-15 innerFlex'>
-    <div><span>B</span>utton</div>
+  <div class='innerFlex'>
+    <div class="title">First Letter Rotating Effect</div>
+    <div class='rotating-button-effect-15 '>
+      <div><span>B</span>utton</div>
+    </div>
   </div>
 
 </div>
