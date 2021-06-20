@@ -20,6 +20,7 @@ export class AnimationsComponent implements OnInit {
     'rotating-button-effect-10',
     'rotating-button-effect-11',
     'rotating-button-effect-13',
+    'rotating-button-effect-14',
     'button-stretch',
   ];
 
