@@ -1,0 +1,62 @@
+.app-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.navbar {
+  flex-shrink: 0;
+  // background-color: #555;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(130deg, #ff7a18, #af002d 41.07%, #319197 76.05%);
+  }
+
+  img {
+    cursor: pointer;
+  }
+
+  .logo {
+    width: 50px;
+    height: 44px;
+    margin: 0 15px;
+  }
+
+  .profile {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: 15px;
+    border: 3px solid #fff;
+
+  }
+
+  span {
+    box-shadow: 0 2px 2px rgb(0 0 0 / 50%);
+    color: #fff;
+    display: inline-block;
+    padding: 0 15px 0 0;
+    font-size: 25px;
+    font-family: Lobster;
+  }
+
+}
+
+
+.body {
+  flex-grow: 1;
+  overflow: auto;
+}
