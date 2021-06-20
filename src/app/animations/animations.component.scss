@@ -1088,10 +1088,9 @@ $white:#fff;
     }
   }
 
-
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 1200px) {
     .innerFlex {
-      flex-basis: 100%;
+      flex-basis: 33%;
     }
   }
 
@@ -1101,9 +1100,13 @@ $white:#fff;
     }
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 500px) {
     .innerFlex {
-      flex-basis: 33%;
+      flex-basis: 100%;
     }
   }
+
+
+
+
 }
