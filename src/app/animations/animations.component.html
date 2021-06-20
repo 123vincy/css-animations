@@ -1,7 +1,8 @@
 <div class="animContainer">
 
   <div *ngFor="let anim of animations" [ngClass]='anim' class="innerFlex">
-    <div> <span *ngIf="anim=='rotating-button-effect-10'"></span>
+    <div> <span
+        *ngIf="anim=='rotating-button-effect-10' || anim=='rotating-button-effect-16' || anim=='rotating-button-effect-17'"></span>
       Hover Me
     </div>
   </div>
