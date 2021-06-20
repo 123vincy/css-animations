@@ -11,6 +11,7 @@ $red:#ff7675;
   width: 100%;
   padding: 10px;
   flex-wrap: wrap;
+  user-select: none !important;
 
 
   .innerFlex {
@@ -20,6 +21,7 @@ $red:#ff7675;
     justify-content: center;
     display: inline-flex;
     cursor: pointer;
+    padding: 10px;
     // border: 1px solid #d7d7d7;
   }
 
@@ -160,7 +162,7 @@ $red:#ff7675;
 
 
       &:hover {
-        letter-spacing: 10px;
+        letter-spacing: 8px;
         border: 7px solid #E1332D;
         font-weight: bold;
 
@@ -771,4 +773,69 @@ $red:#ff7675;
     }
   }
 
+  .rotating-button-effect-15 {
+    div {
+      background: transparent;
+      color: $orange;
+      text-align: center;
+      position: relative;
+      padding: 20px 50px;
+      text-align: center;
+      border: 2px solid $orange;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transition: 0.25s;
+        z-index: -1;
+        background: $yellow;
+        opacity: 0;
+      }
+
+      span {
+        color: transparent;
+        position: relative;
+
+        &:before {
+          content: "B";
+          position: absolute;
+          color: $orange;
+          transition: 0.5s;
+        }
+      }
+
+      &:hover:before {
+        opacity: 1;
+        transform: rotate(15deg);
+      }
+
+      &:hover span:before {
+        font-size: 70px;
+        transform: translate(-80%, -40%) rotate(360deg);
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  .innerFlex {
+    flex-basis: 50%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .innerFlex {
+    flex-basis: 33%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .innerFlex {
+    flex-basis: 25%;
+  }
 }
