@@ -580,4 +580,16 @@ $cyan:#006266;
   }
 
 
+  @media screen and (min-width:500px) and (max-width: 1200px) {
+    .innerFlex {
+      flex-basis: 50%;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .innerFlex {
+      flex-basis: 100%;
+    }
+
+  }
 }
