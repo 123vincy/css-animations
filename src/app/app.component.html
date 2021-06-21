@@ -1,11 +1,12 @@
 <div class="app-container">
   <div class="navbar">
-    <img class="logo" src="./assets/logo.png" />
-    <span>CSS Animations</span>
+    <img class="logo" src="./assets/logo.png" routerLink="/" />
+    <span routerLink="/">CSS Animations</span>
     <img class="profile" src="./assets/profile pic cropped.jpg" />
   </div>
 
   <div class="body">
-    <app-animations></app-animations>
+
+    <router-outlet></router-outlet>
   </div>
 </div>

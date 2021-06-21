@@ -1,0 +1,1112 @@
+$orange:#ff7a18;
+$yellow: #FAFA33;
+$lightblue:#20caff;
+$blue:#0a3d62;
+$red:#ff7675;
+$black:#272727;
+$white:#fff;
+
+.animContainer {
+  display: flex;
+  // align-items: center;
+  // justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  flex-wrap: wrap;
+  user-select: none !important;
+
+
+  .innerFlex {
+    flex-basis: 20%;
+    height: 25%;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    cursor: pointer;
+    padding: 10px;
+    flex-direction: column;
+    // border: 1px solid #d7d7d7;
+  }
+
+  .title {
+    color: $white;
+    padding-bottom: 10px;
+    font-family: cursive;
+    font-size: 14px;
+  }
+
+  .rotating-button-effect {
+
+    div {
+      background: transparent;
+      border: 2px solid $orange;
+      color: $orange;
+      padding: 20px 50px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: $yellow;
+        transform-origin: bottom left;
+        transform: rotate(-90deg);
+        transition: transform 0.5s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: -1;
+      }
+
+      &:hover:before {
+        transform: rotate(0deg);
+      }
+    }
+
+  }
+
+  .rotating-button-effect-1 {
+    div {
+      background: transparent;
+      border: 2px solid $orange;
+      color: $orange;
+      padding: 20px 50px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background: $yellow;
+        transform: translateX(-100%);
+        transition: all 0.5s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: -1;
+      }
+
+      &:hover {
+
+        &:before {
+          transform: translate(0%);
+        }
+      }
+    }
+
+  }
+
+  .rotating-button-effect-2 {
+    div {
+      background: transparent;
+      border: 2px solid $orange;
+      color: $orange;
+      padding: 20px 50px;
+      text-align: center;
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background: $yellow;
+        transform: rotateX(90deg);
+        transition: 0.5s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: -1;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background: $yellow;
+        transform: rotateY(90deg);
+        transition: 0.5s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: -1;
+      }
+
+      &:hover {
+
+        &:before {
+          transform: rotateX(0);
+        }
+
+        &:after {
+          transform: rotateX(0);
+        }
+      }
+    }
+  }
+
+  .button-stretch {
+    div {
+      background: transparent;
+      border: 2px solid #E1332D;
+      color: #E1332D;
+      padding: 20px 50px;
+      text-align: center;
+      position: relative;
+      transition: 0.5s;
+
+
+      &:hover {
+        letter-spacing: 8px;
+        border: 7px solid #E1332D;
+        font-weight: bold;
+
+      }
+    }
+  }
+
+  .rotating-button-effect-3 {
+    div {
+      background: transparent;
+      border: 2px solid $orange;
+      color: $orange;
+      padding: 20px 50px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+
+      &:before {
+        content: "YEAH!";
+        color: $orange;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: $yellow;
+        transition: 0.5s;
+        transform: translateY(-100%);
+      }
+
+      &:hover:before {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  .rotating-button-effect-4 {
+    div {
+      background: transparent;
+      border: 2px solid $orange;
+      color: $orange;
+      padding: 20px 50px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 50%;
+        transition: 0.5s;
+        background: $yellow;
+        transform: translateX(-100%) rotate(45deg);
+      }
+
+      &:hover {
+        background: #f44336;
+        color: $white;
+
+        &:before {
+          transform: translateX(100%) rotate(45deg);
+        }
+      }
+    }
+  }
+
+  .rotating-button-effect-5 {
+    div {
+      background: $orange;
+      border: 2px solid $orange;
+      color: transparent;
+      padding: 20px 50px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+
+      &:before {
+        content: "Hover Me";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        transition: 0.5s;
+        background: $yellow;
+        color: $orange;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // transform: translateX(-100%);
+      }
+
+      &:after {
+        content: "Hover Me";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        transition: 0.5s;
+        background: $yellow;
+        color: $orange;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translate(-100%, 100%);
+      }
+
+      &:hover {
+        &:before {
+          transform: translate(100%, -100%);
+        }
+
+        &:after {
+          transform: translate(0, 0);
+        }
+      }
+    }
+  }
+
+  .rotating-button-effect-6 {
+    div {
+      background: transparent;
+      border: 2px solid $orange;
+      color: $orange;
+      padding: 20px 50px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+
+      &:before {
+        content: "Hover Me";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        transition: 0.5s;
+        background: $yellow;
+        color: $orange;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: scale(3);
+        opacity: 0;
+      }
+
+      &:hover {
+        &:before {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .rotating-button-effect-7 {
+    div {
+      background: transparent;
+      border: 2px solid $orange;
+      color: $orange;
+      padding: 20px 50px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+
+      &:before {
+        content: "Hover Me";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 0;
+        transition: 0.5s;
+        background: $yellow;
+        color: $orange;
+        border-radius: 0 0 20% 20%;
+        transition: 0.5s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      &:hover {
+        &:before {
+          height: 120%;
+        }
+      }
+    }
+  }
+
+  .rotating-button-effect-8 {
+    div {
+      background: $yellow;
+      border: 2px solid $orange;
+      color: $orange;
+      padding: 20px 50px;
+      text-align: center;
+      position: relative;
+      // overflow: hidden;
+
+      &:before {
+        content: "Hover Me";
+        color: $orange;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #2ce771;
+        transition: 0.5s;
+        transform-origin: top;
+        transform: rotateX(270deg);
+      }
+
+      &:after {
+        content: "Hover Me";
+        color: $white;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: $orange;
+        transition: 0.5s;
+        transform-origin: top;
+        transform: rotateX(270deg);
+        transition-delay: 0.25s;
+      }
+
+      &:hover:before {
+        transform: rotateX(0deg);
+      }
+
+      &:hover:after {
+        transform: rotateX(0deg);
+      }
+    }
+  }
+
+  .rotating-button-effect-9 {
+    div {
+      background: $yellow;
+      border: 2px solid $orange;
+      color: $orange;
+      padding: 20px 50px;
+      text-align: center;
+      position: relative;
+      // overflow: hidden;
+
+      &:before {
+        content: "Hover Me";
+        color: $orange;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: $yellow;
+        transition: 1s;
+      }
+
+      &:after {
+        content: "Hover Me";
+        color: $orange;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: -100%;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: $yellow;
+        transition: 1s;
+        transform: scale(0) rotateY(0deg);
+        opacity: 0;
+      }
+
+      &:hover:before {
+        left: 100%;
+        transform: scale(0) rotateY(360deg);
+        opacity: 0;
+      }
+
+      &:hover:after {
+        left: 0;
+        transform: scale(1) rotateY(360deg);
+        opacity: 1;
+      }
+    }
+  }
+
+  .rotating-button-effect-10 {
+    div {
+      background: transparent;
+      color: $yellow;
+      text-align: center;
+      position: relative;
+      padding: 20px 50px;
+      transition: 0.5s;
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background: $yellow;
+        transition: 0.5s;
+        z-index: -1;
+        opacity: 0;
+      }
+
+      &:before {
+        left: 0;
+        box-shadow: -100px 0 0 $yellow;
+      }
+
+      &:after {
+        right: 0;
+        box-shadow: 100px 0 0 $yellow;
+      }
+
+      &:hover {
+        color: $orange;
+      }
+
+      &:hover:before {
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 30px 0 0 $yellow;
+        opacity: 1;
+      }
+
+      &:hover:after {
+        right: 50%;
+        transform: translateX(50%);
+        box-shadow: -30px 0 0 $yellow;
+        opacity: 1;
+      }
+
+      span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $yellow;
+        z-index: -1;
+        transform: scale(0);
+        transition: 0.5s;
+        border-radius: 8px;
+      }
+
+      &:hover span {
+        transform: scale(1);
+        transition-delay: 0.5s;
+      }
+    }
+  }
+
+  .rotating-button-effect-11 {
+    div {
+      background: transparent;
+      color: $yellow;
+      text-align: center;
+      position: relative;
+      padding: 20px 50px;
+      text-align: center;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: -3px;
+        left: -3px;
+        height: 100%;
+        width: 100%;
+        background: $lightblue;
+        transition: 0.5s;
+        z-index: -1;
+        mix-blend-mode: multiply;
+        transform-origin: top;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        height: 100%;
+        width: 100%;
+        background: $red;
+        transition: 0.5s;
+        z-index: -1;
+        mix-blend-mode: multiply;
+        transform-origin: bottom;
+      }
+
+      &:hover {
+        color: $orange;
+      }
+
+      &:hover:before {
+        top: -6px;
+        left: 0;
+        transform: perspective(1000px) rotateX(75deg)
+      }
+
+      &:hover:after {
+        top: 6px;
+        left: 0;
+        transform: perspective(1000px) rotateX(-75deg)
+      }
+    }
+  }
+
+  .rotating-button-effect-12 {
+    div {
+      background: transparent;
+      color: $orange;
+      text-align: center;
+      position: relative;
+      padding: 20px 50px;
+      text-align: center;
+      border: 1px solid $yellow;
+      overflow: hidden;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: -25%;
+        height: 100%;
+        width: 25%;
+        background: $yellow;
+        transition: 0.25s;
+        z-index: -1;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: -25%;
+        height: 100%;
+        width: 25%;
+        background: $yellow;
+        transition: 0.25s;
+        z-index: -1;
+      }
+
+      span {
+        &:before {
+          content: "";
+          position: absolute;
+          top: -100%;
+          left: 25%;
+          height: 100%;
+          width: 25%;
+          background: $yellow;
+          transition: 0.25s;
+          z-index: -1;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          right: 25%;
+          height: 100%;
+          width: 25%;
+          background: $yellow;
+          transition: 0.25s;
+          z-index: -1;
+        }
+
+
+      }
+
+      &:hover {
+        color: $orange;
+
+        span:before,
+        span:after {
+          top: 0
+        }
+      }
+
+      &:hover:before {
+        left: 0;
+      }
+
+      &:hover:after {
+        right: 0;
+      }
+    }
+  }
+
+  .rotating-button-effect-13 {
+    div {
+      background: transparent;
+      color: $orange;
+      text-align: center;
+      position: relative;
+      padding: 20px 50px;
+      text-align: center;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: -20%;
+        left: 0;
+        height: 140%;
+        width: 100%;
+        transition: 0.4s;
+        z-index: -1;
+        border-left: 2px solid $yellow;
+        border-right: 2px solid $orange;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -15%;
+        height: 100%;
+        width: 130%;
+        transition: 0.4s;
+        transition-delay: 0.4s;
+        z-index: -1;
+        border-top: 2px solid $yellow;
+        border-bottom: 2px solid $orange;
+      }
+
+      &:hover:before {
+        transform: rotateY(180deg);
+      }
+
+      &:hover:after {
+        transform: rotateX(180deg);
+      }
+    }
+  }
+
+  .rotating-button-effect-14 {
+    div {
+      background: transparent;
+      color: $orange;
+      background: $yellow;
+      text-align: center;
+      position: relative;
+      padding: 20px 50px;
+      text-align: center;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        height: 40%;
+        width: 20%;
+        transition: 0.25s;
+        z-index: -1;
+        border-top: 2px solid $orange;
+        border-left: 2px solid $orange;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        right: -5px;
+        height: 40%;
+        width: 20%;
+        transition: 0.25s;
+        z-index: -1;
+        border-bottom: 2px solid $orange;
+        border-right: 2px solid $orange;
+      }
+
+      &:hover:before {
+        width: 100%;
+        height: 100%;
+      }
+
+      &:hover:after {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .rotating-button-effect-15 {
+    div {
+      background: transparent;
+      color: $orange;
+      text-align: center;
+      position: relative;
+      padding: 20px 50px;
+      text-align: center;
+      border: 2px solid $orange;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transition: 0.25s;
+        z-index: -1;
+        background: $yellow;
+        opacity: 0;
+      }
+
+      span {
+        color: transparent;
+        position: relative;
+
+        &:before {
+          content: "B";
+          position: absolute;
+          color: $orange;
+          transition: 0.5s;
+        }
+      }
+
+      &:hover:before {
+        opacity: 1;
+        transform: rotate(15deg);
+      }
+
+      &:hover span:before {
+        font-size: 70px;
+        transform: translate(-80%, -40%) rotate(360deg);
+      }
+    }
+  }
+
+  .rotating-button-effect-16 {
+    div {
+      background: transparent;
+      color: $orange;
+      text-align: center;
+      position: relative;
+      padding: 20px 50px;
+      text-align: center;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 4px;
+        width: 0%;
+        background: $orange;
+        transition: 0.5s;
+        z-index: -1;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 4px;
+        width: 0%;
+        background: $orange;
+        transition: 0.5s;
+        z-index: -1;
+      }
+
+      span {
+        &:before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 0;
+          width: 4px;
+          background: $orange;
+          transition: 0.5s;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 0;
+          width: 4px;
+          background: $orange;
+          transition: 0.5s;
+        }
+      }
+
+      &:hover:before,
+      &:hover:after {
+        width: 100%;
+      }
+
+      &:hover span:before,
+      &:hover span:after {
+        height: 100%;
+      }
+    }
+  }
+
+  .rotating-button-effect-17 {
+    div {
+      background: transparent;
+      color: $orange;
+      text-align: center;
+      position: relative;
+      padding: 20px 50px;
+      text-align: center;
+      overflow: hidden;
+
+      span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: transparent;
+        width: 100%;
+        height: 100%;
+        border: 2px solid $orange;
+        z-index: -1;
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          height: 350%;
+          width: 10px;
+          background: $black;
+          transition: 0.5s;
+          transform: translate(-50%, -50%) rotate(-60deg);
+          z-index: -1;
+        }
+      }
+
+      &:hover {
+        color: $yellow;
+
+        span:before {
+          background: $orange;
+          width: 100%;
+          transform: translate(-50%, -50%) rotate(60deg);
+        }
+      }
+    }
+  }
+
+  .rotating-button-effect-18 {
+    div {
+      background: transparent;
+      color: $white;
+      text-align: center;
+      position: relative;
+      padding: 20px 50px;
+      text-align: center;
+
+      &:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        left: -3%;
+        top: -5px;
+        background-color: $red;
+        transform: skewX(30deg);
+        z-index: -1;
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        left: 51%;
+        top: 5px;
+        background-color: $blue;
+        transform: skewX(30deg);
+        z-index: -1;
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+
+      &:hover {
+        &:before {
+          transform: skewX(0);
+          top: 0;
+          left: 50%;
+        }
+
+        &:after {
+          transform: skewX(0);
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  .rotating-button-effect-19 {
+    div {
+      background: transparent;
+      color: $orange;
+      text-align: center;
+      position: relative;
+      padding: 20px 50px;
+      text-align: center;
+      background-color: $yellow;
+      border-radius: 30px;
+      transition: 0.4s;
+
+      &:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background-color: $yellow;
+        z-index: -1;
+        transition: all 0.5s;
+        border-radius: 30px;
+      }
+
+      &:hover {
+        transform: translateY(-3px);
+
+        &:before {
+          transform: scale(1.5);
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  .rotating-button-effect-20 {
+    div {
+      background: transparent;
+      color: $orange;
+      text-align: center;
+      position: relative;
+      padding: 20px 50px;
+      text-align: center;
+      background-color: transparent;
+      border: 2px solid $orange;
+      transition: 0.4s;
+      overflow: hidden;
+
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        top: 0;
+        border-top: 30px solid $orange;
+        border-bottom: 30px solid $orange;
+        border-right: 30px solid transparent;
+        z-index: -1;
+        transition: all 0.5s;
+        transform: translateX(-100%);
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        top: 0;
+        border-top: 30px solid $orange;
+        border-bottom: 30px solid $orange;
+        border-left: 30px solid transparent;
+        z-index: -1;
+        transition: all 0.5s;
+        transform: translateX(100%);
+      }
+
+      &:hover {
+
+        color: $white;
+
+        &:before,
+        &:after {
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width:850px) and (max-width: 1200px) {
+    .innerFlex {
+      flex-basis: 33%;
+    }
+  }
+
+  @media screen and (min-width:500px) and (max-width: 850px) {
+    .innerFlex {
+      flex-basis: 50%;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .innerFlex {
+      flex-basis: 100%;
+    }
+  }
+
+
+
+
+}

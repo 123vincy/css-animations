@@ -1,0 +1,29 @@
+<div class="animContainer">
+
+  <div *ngFor="let anim of animations" class="innerFlex">
+
+    <div class="title">{{anim.title}}</div>
+
+    <div class="{{anim.class}}">
+      <div class="inner">
+
+        <ng-container *ngIf="anim.key=='A'">
+          <img src={{anim.src}}>
+          <div class="captions">
+            <span>{{anim.caption}}</span>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="anim.key=='B'">
+          <img src={{anim.src}}>
+          <div class="captions">
+            <h2>Image hover</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.</p>
+            <a href="">Read more</a>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+
+</div>

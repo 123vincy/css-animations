@@ -1,27 +1,17 @@
-<div class="animContainer">
-
-  <div *ngFor="let anim of animations" class="innerFlex">
-
-    <div class="title">{{anim.title}}</div>
-
-    <div [ngClass]='anim.class'>
-      <div> <span
-          *ngIf="anim.class=='rotating-button-effect-10' || anim.class=='rotating-button-effect-16' || anim.class=='rotating-button-effect-17'"></span>
-        Hover Me
-      </div>
+<div class="container">
+  <div class="card" routerLink="/button-hover-effects">
+    <img
+      src="https://i2.wp.com/codemyui.com/wp-content/uploads/2018/07/Multi-Layered-Button-Hover-Effect-in-Pure-CSS.gif?fit=880%2C440&ssl=1"
+      alt="./assets/logo.png" style="width:100%">
+    <div class="details">
+      Button Hover Effects
     </div>
   </div>
-  <div class='innerFlex'>
-    <div class="title">Splitted Button Effect</div>
-    <div class='rotating-button-effect-12 '>
-      <div><span>Hover Me</span></div>
+  <div class="card" routerLink="/image-hover-effects">
+    <img src="https://webartdevelopers.com/blog/wp-content/uploads/2018/11/attract-hover-effect.gif"
+      alt="./assets/logo.png" style="width:100%">
+    <div class="details">
+      Image Hover Effects
     </div>
   </div>
-  <div class='innerFlex'>
-    <div class="title">First Letter Rotating Effect</div>
-    <div class='rotating-button-effect-15 '>
-      <div><span>B</span>utton</div>
-    </div>
-  </div>
-
 </div>
