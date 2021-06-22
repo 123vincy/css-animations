@@ -1,3 +1,5 @@
+import { CardHoverEffectsComponent } from './card-hover-effects/card-hover-effects.component';
+import { MenuHoverEffectsComponent } from './menu-hover-effects/menu-hover-effects.component';
 import { ImageHoverEffectsComponent } from './image-hover-effects/image-hover-effects.component';
 import { AnimationsComponent } from './animations/animations.component';
 import { ButtonHoverEffectsComponent } from './button-hover-effects/button-hover-effects.component';
@@ -16,6 +18,14 @@ const routes: Routes = [
   {
     path: 'image-hover-effects',
     component: ImageHoverEffectsComponent,
+  },
+  {
+    path: 'menu-hover-effects',
+    component: MenuHoverEffectsComponent,
+  },
+  {
+    path: 'card-hover-effects',
+    component: CardHoverEffectsComponent,
   },
   {
     path: '',

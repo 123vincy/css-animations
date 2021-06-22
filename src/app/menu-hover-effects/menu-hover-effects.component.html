@@ -1,0 +1,29 @@
+<div class="animContainer">
+
+  <div *ngFor="let anim of animations" class="innerFlex">
+
+    <div class="title">{{anim.title}}</div>
+
+    <div class="{{anim.class}}">
+
+      <ng-container *ngIf="anim.key!='C'">
+        <ul>
+          <li><a href="" data-text="Home">Home <span></span></a></li>
+          <li><a href="" data-text="About">About <span></span></a></li>
+          <li><a href="" data-text="Portfolio">Portfolio <span></span></a></li>
+          <li><a href="" data-text="Contact">Contact <span></span></a></li>
+        </ul>
+      </ng-container>
+      <ng-container *ngIf="anim.key=='C'">
+
+        <ul>
+          <li><a href=""> <span>Home</span><span>Home</span></a></li>
+          <li><a href=""> <span>About</span><span>About</span></a></li>
+          <li><a href=""> <span>Portfolio</span><span>Portfolio</span></a></li>
+          <li><a href=""> <span>Contact</span><span>Contact</span></a></li>
+        </ul>
+      </ng-container>
+    </div>
+  </div>
+
+</div>
