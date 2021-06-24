@@ -42,6 +42,21 @@ export class MenuHoverEffectsComponent implements OnInit {
       title: 'Colourful Layered Menu Effect',
       key: 'A',
     },
+    {
+      class: 'menu-hover-effect-8',
+      title: 'Blurry Menu Effect',
+      key: 'A',
+    },
+    {
+      class: 'menu-hover-effect-9',
+      title: 'Border Sniper Menu Effect',
+      key: 'A',
+    },
+    {
+      class: 'menu-hover-effect-10',
+      title: 'Border Rotation Menu Effect',
+      key: 'A',
+    },
   ];
 
   constructor() {}

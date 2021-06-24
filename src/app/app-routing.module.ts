@@ -1,3 +1,6 @@
+import { LoadersComponent } from './loaders/loaders.component';
+import { AnimationsPart1Component } from './animations.part1/animations.part1.component';
+import { CsstransformsComponent } from './csstransforms/csstransforms.component';
 import { CardHoverEffectsComponent } from './card-hover-effects/card-hover-effects.component';
 import { MenuHoverEffectsComponent } from './menu-hover-effects/menu-hover-effects.component';
 import { ImageHoverEffectsComponent } from './image-hover-effects/image-hover-effects.component';
@@ -26,6 +29,18 @@ const routes: Routes = [
   {
     path: 'card-hover-effects',
     component: CardHoverEffectsComponent,
+  },
+  {
+    path: 'csstransforms-hover-effects',
+    component: CsstransformsComponent,
+  },
+  {
+    path: 'animations1',
+    component: AnimationsPart1Component,
+  },
+  {
+    path: 'loaders',
+    component: LoadersComponent,
   },
   {
     path: '',

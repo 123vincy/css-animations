@@ -8,6 +8,9 @@ import { ButtonHoverEffectsComponent } from './button-hover-effects/button-hover
 import { ImageHoverEffectsComponent } from './image-hover-effects/image-hover-effects.component';
 import { MenuHoverEffectsComponent } from './menu-hover-effects/menu-hover-effects.component';
 import { CardHoverEffectsComponent } from './card-hover-effects/card-hover-effects.component';
+import { CsstransformsComponent } from './csstransforms/csstransforms.component';
+import { AnimationsPart1Component } from './animations.part1/animations.part1.component';
+import { LoadersComponent } from './loaders/loaders.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +19,13 @@ import { CardHoverEffectsComponent } from './card-hover-effects/card-hover-effec
     ButtonHoverEffectsComponent,
     ImageHoverEffectsComponent,
     MenuHoverEffectsComponent,
-    CardHoverEffectsComponent
+    CardHoverEffectsComponent,
+    CsstransformsComponent,
+    AnimationsPart1Component,
+    LoadersComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
