@@ -5,8 +5,12 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'roboto';
   user-select: none !important;
+}
+
+* {
+
+  font-family: 'roboto';
 }
 
 body {

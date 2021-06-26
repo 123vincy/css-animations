@@ -9,6 +9,7 @@ $white: #fff;
 $darkred: rgb(187, 0, 0);
 $gray: #777;
 $pink: #ff56ac;
+$green: #58ea00;
 
 .animContainer {
   display: flex;
@@ -126,6 +127,7 @@ $pink: #ff56ac;
         bottom: -75px;
         left: 5%;
         width: 300px;
+        z-index: 1;
       }
 
       .bike {
@@ -133,6 +135,7 @@ $pink: #ff56ac;
         bottom: 50px;
         left: 50%;
         width: 200px;
+        z-index: 2;
       }
     }
   }
@@ -418,6 +421,7 @@ $pink: #ff56ac;
     .background {
       background: url("https://thumbs.dreamstime.com/b/colorful-transparent-star-background-party-wallpaper-accessories-png-additional-file-colorful-transparent-seamless-star-124080182.jpg");
       -webkit-background-clip: text;
+      background-clip: text;
       position: relative;
       color: transparent;
       font-size: 50px;
@@ -533,11 +537,361 @@ $pink: #ff56ac;
     }
   }
 
+  .css-animations-11 {
+    @keyframes iconsRotate {
+      0% {
+        transform: scale(0.92) rotate(0deg);
+      }
+
+      100% {
+        transform: scale(0.92) rotate(360deg);
+      }
+    }
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      li {
+        color: $white;
+        width: 80px;
+        height: 80px;
+        margin: 0 20px;
+        font-size: 30px;
+        border: 2px solid $white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        transition: all 0.5s;
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          border-radius: 50%;
+          background: $white;
+          transition: all 0.5s;
+          opacity: 0;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          border-radius: 50%;
+          background: transparent;
+          border: 2px dashed $white;
+          transition: all 0.5s;
+          opacity: 0;
+        }
+
+        &:hover {
+          color: $blue;
+
+          &:before {
+            transform: scale(0.8);
+            opacity: 1;
+          }
+
+          &:after {
+            animation: iconsRotate linear 5s infinite;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .css-animations-12 {
+    @keyframes pulseIcon {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+
+      50% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      100% {
+        transform: scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .pulse {
+      color: $white;
+      background: $green;
+      width: 80px;
+      height: 80px;
+      margin: 0 20px;
+      font-size: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      transition: all 0.5s;
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        left: -12px;
+        top: -12px;
+        bottom: -12px;
+        right: -12px;
+        background: transparent;
+        border: 2px solid $green;
+        z-index: -1;
+        border-radius: 50%;
+        transition: all 0.5s;
+        animation: pulseIcon 1.5s linear infinite;
+      }
+
+      &:after {
+        animation-delay: 0.5s;
+      }
+
+    }
+  }
+
+  .css-animations-13 {
+    @keyframes pendulum-left {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      25% {
+        transform: rotate(30deg);
+      }
+
+      50% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+
+    @keyframes pendulum-right {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      50% {
+        transform: rotate(0deg);
+      }
+
+      75% {
+        transform: rotate(-30deg);
+      }
+
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+
+    position: relative;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .pendulum {
+      width: 100%;
+      height: 100%;
+      border-top: 10px solid $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      span {
+        height: 100%;
+        border: 2px solid $white;
+        margin: 0 28px;
+        position: relative;
+        transform-origin: top;
+
+        &:before {
+          content: "";
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          background: $white;
+          transform: translateX(-50%);
+        }
+
+        &:first-child {
+          animation: pendulum-left 2s ease-in infinite;
+        }
+
+        &:last-child {
+          animation: pendulum-right 2s ease-in infinite;
+        }
+      }
+    }
+  }
+
+  .css-animations-14 {
+    @keyframes loading-11 {
+      0% {
+        bottom: -100px;
+      }
+
+      100% {
+        bottom: 100%;
+        transform: rotate(180deg);
+        opacity: 0;
+      }
+    }
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .background {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $white;
+        font-size: 45px;
+        border-top: 4px solid $white;
+        border-bottom: 4px solid $white;
+        text-align: center;
+      }
+
+      .boxes {
+        position: absolute;
+        bottom: -100px;
+        background: $gray;
+        animation: loading-11 5s linear infinite;
+
+        &:nth-child(1) {
+          left: 5%;
+        }
+
+        &:nth-child(2) {
+          left: 10%;
+          width: 30px;
+          height: 30px;
+          animation-delay: 1s;
+        }
+
+        &:nth-child(3) {
+          left: 15%;
+          width: 50px;
+          height: 50px;
+          animation-delay: 2s;
+        }
+
+        &:nth-child(4) {
+          left: 50%;
+          width: 61px;
+          height: 61px;
+          animation-delay: 3s;
+        }
+
+        &:nth-child(5) {
+          left: 260%;
+          width: 37px;
+          height: 37px;
+          animation-delay: 6s;
+        }
+
+        &:nth-child(6) {
+          left: 70%;
+          width: 48px;
+          height: 48px;
+          animation-delay: 5s;
+        }
+
+        &:nth-child(7) {
+          left: 450%;
+          width: 25px;
+          height: 25px;
+          animation-delay: 8s;
+        }
+
+        &:nth-child(8) {
+          left: 7%;
+          width: 60px;
+          height: 60px;
+          animation-delay: 7s;
+        }
+
+        &:nth-child(9) {
+          left: 70%;
+          width: 35px;
+          height: 35px;
+          animation-delay: 9s;
+        }
+
+        &:nth-child(10) {
+          left: 30%;
+          width: 42px;
+          height: 42px;
+          animation-delay: 11s;
+        }
+      }
+    }
+  }
 
 
   @media screen and (max-width: 1200px) {
     .innerFlex {
-      flex-basis: 100%;
+      flex-basis: 100% !important;
     }
   }
 
